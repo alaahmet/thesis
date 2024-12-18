@@ -43,7 +43,7 @@ set<int> findBasis(set<int> B) {
     vector<int> x = basisToX(B);
     for(auto h: B) {
         int i = h / 2;
-        if(x[i] == 0) continue; // h is not needed in the basis, since x[h] >= 0 always holds
+        if(x[i] == 0) continue; // h is not needed in the basis, because x[h] >= 0 always holds
         if(i == 0) {
             assert(h == 1);
             if(x[0] == 1) newBasis.insert(1);
@@ -57,7 +57,7 @@ set<int> findBasis(set<int> B) {
     }
     return newBasis;
 }
-
+// returns true if h violates B
 bool violates(int h, set<int> B) {
     vector <int> X = basisToX(B);
     B.insert(h);
