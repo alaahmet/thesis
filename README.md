@@ -1,4 +1,4 @@
-# Experiment Results
+## Runs for Sharir-Welzl Standard Algorithm
 
 | **Number of Runs** | **d**   | **Average Number of Basis Changes** |
 |---------------------|---------|-------------------------------------|
@@ -11,3 +11,16 @@
 | 1000               | 600     | 977.960                             |
 | 1000               | 800     | 1303.904                            |
 | 1000               | 1000    | 1630.662                            |
+
+
+## Runs for Sharir-Welzl One Permutation Variant Algorithm
+
+| **Number of Runs** | **d**   | **Average Number of Basis Changes** |
+|---------------------|---------|-------------------------------------|
+| 1000               | 10      | 39.092000                              |
+| 1000               | 20      | 176.094000                             |
+| 1000               | 50      | 1720.856000                            |
+| 1000               | 100     | 12031.589000                           |
+| 20                 | 150     | 44882.100000                           |
+| 20                 | 200     | running for ages so far
+
