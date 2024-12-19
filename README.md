@@ -39,7 +39,7 @@ The following tests use `d` variables and `2d` constraints.
 
 #### Notes:
   
-- There is high variance in the One Permutation Variant, so 20 runs are definitely not a reliable indicator.
+- There is high variance in the One Permutation Variant.
 
 ---
 
