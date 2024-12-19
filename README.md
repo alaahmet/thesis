@@ -39,9 +39,7 @@ The following tests use `d` variables and `2d` constraints.
 
 #### Notes:
   
-- There is high variance in the One Permutation Variant, so 20 runs are definitely not a reliable indicator.  
-- For `d = 200`, 1000 repeats might take half a day.  
-- For `d = 500`, 1000 repeats might take months to complete.
+- There is high variance in the One Permutation Variant, so 20 runs are definitely not a reliable indicator.
 
 ---
 
