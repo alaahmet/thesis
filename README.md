@@ -10,7 +10,7 @@ The following tests use `d` variables and `2d` constraints.
 
 ### Runs for **Sharir-Welzl Standard Algorithm**
 
-| **Number of Runs** | **d**   | **Average Number of Basis Changes** | **Ratio (Average Number / d)** |
+| **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **Ratio (Average Number / d)** |
 |---------------------|---------|-------------------------------------|--------------------------------|
 | 100'000              | 10      | 15.5201                             | 1.552010                        |
 | 100'000              | 20      | 31.836640                             | 1.591832                       |
@@ -27,7 +27,7 @@ The following tests use `d` variables and `2d` constraints.
 
 ### Runs for **Sharir-Welzl One Permutation Variant Algorithm**
 
-| **Number of Runs** | **d**   | **Average Number of Basis Changes** |
+| **Number of Repeats** | **d**   | **Average Number of Basis Changes** |
 |---------------------|---------|-------------------------------------|
 | 10'000               | 10      | 38.2594                              |
 | 10'000               | 20      | 172.2173                            |
