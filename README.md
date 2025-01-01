@@ -40,7 +40,7 @@ The following tests use `d` variables and `2d` constraints.
 
 ## Files
 
-1. **`lpsw.cpp`**: Implements the Standard Sharir-Welzl Algorithm (Section 2 of the paper). Initial Start Basis is randomized in every run.
+1. **`lpsw.cpp`**: Implements the Standard Sharir-Welzl Algorithm (Section 2 of the paper). Initial Start Basis is rerandomized in every run.
    - Takes `d` (number of variables) as an argument.
    - Compile and test using:
      ```bash
@@ -48,7 +48,7 @@ The following tests use `d` variables and `2d` constraints.
      ./lpsw <d>
      ```
 
-2. **`lpswop.cpp`**: Implements the One Permutation Variant of the Sharir-Welzl Algorithm (Section 3 of the paper). Initial Start Basis is randomized in every run.
+2. **`lpswop.cpp`**: Implements the One Permutation Variant of the Sharir-Welzl Algorithm (Section 3 of the paper). Initial Start Basis is rerandomized in every run.
    - Takes `d` (number of variables) as an argument.
    - Compile and test using:
      ```bash
