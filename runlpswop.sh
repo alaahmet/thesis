@@ -18,32 +18,58 @@ fi
 
 echo "Compilation successful."
 
+calculate_stats() {
+    local results=("$@")
+    local n=${#results[@]}
+    local sum=0
+    local sum_sq=0
+
+    for result in "${results[@]}"; do
+        sum=$(echo "$sum + $result" | bc)
+        sum_sq=$(echo "$sum_sq + $result * $result" | bc)
+    done
+
+    local average=$(echo "scale=6; $sum / $n" | bc)
+    local variance=$(echo "scale=6; ($sum_sq - $sum * $sum / $n) / ($n - 1)" | bc)
+    local std_dev=$(echo "scale=6; sqrt($variance)" | bc)
+
+    echo "$average $std_dev"
+}
+
 if [ "$mode" -eq 0 ]; then
-    
     echo "Running the program $runs times for $program_input_d."
 
-    # Run in parallel using `xargs`
-    results=$(seq 1 "$runs" | xargs -P 0 -I {} ./lpswop "$program_input_d")
+    # Run in parallel using `xargs` and store results in an array
+    mapfile -t results < <(seq 1 "$runs" | xargs -P 0 -I {} ./lpswop "$program_input_d")
 
-    # Calculate total and average
-    total=$(echo "$results" | paste -sd+ - | bc)
-    average=$(echo "scale=6; $total / $runs" | bc)
+    # Calculate average and standard deviation
+    read -r average std_dev <<< $(calculate_stats "${results[@]}")
 
-    echo "Average number of Basis Changes for d=$program_input_d: $average"
+    echo "For d=$program_input_d:"
+    echo "Average number of Basis Changes: $average"
+    echo "Standard Deviation: $std_dev"
 
 elif [ "$mode" -eq 1 ]; then
-    echo "Running the program $runs times for each d in 10, 20, 50, 100, 200, 400, 600, 800, 1000."
+    d_values=(5 10 20 50 100 150 200 250 300)
+    echo "Running the program $runs times for each d equal to ${d_values[*]}."
     
-    for d in 10 20 50 100 200 400 600 800 1000; do
+    # Print table header
+    echo "| **Number of Repeats** | **d** | **Average Number of Basis Changes** | **Standard Deviation** |"
+    echo "|------------------------|-------|-------------------------------------|------------------------|"
+    
+    for d in "${d_values[@]}"; do
+        # Run in parallel using `xargs` and store results in an array
+        mapfile -t results < <(seq 1 "$runs" | xargs -P 0 -I {} ./lpswop "$d")
         
-        # Run in parallel using `xargs`
-        results=$(seq 1 "$runs" | xargs -P 0 -I {} ./lpswop "$d")
+        # Calculate average and standard deviation
+        read -r average std_dev <<< $(calculate_stats "${results[@]}")
         
-        # Calculate total and average for each d
-        total=$(echo "$results" | paste -sd+ - | bc)
-        average=$(echo "scale=6; $total / $runs" | bc)
+        # Format numbers with 6 decimal places
+        formatted_average=$(printf "%.2f" "$average")
+        formatted_std_dev=$(printf "%.2f" "$std_dev")
         
-        echo "Average number of Basis Changes for d=$d: $average"
+        # Print table row
+        echo "| $runs | $d | $formatted_average | $formatted_std_dev |"
     done
 else
     echo "Invalid mode! Mode must be either 0 or 1."
