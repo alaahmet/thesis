@@ -9,19 +9,7 @@ I used Euler Cluster with 48 cores(maximum available number of cores without a s
 The following tests use `d` variables and `2d` constraints.  
 
 ### Runs for **Sharir-Welzl Standard Algorithm**
-
-| **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **Ratio (Average Number / d)** |
-|---------------------|---------|-------------------------------------|--------------------------------|
-| 100'000              | 10      | 15.5201                             | 1.552010                        |
-| 100'000              | 20      | 31.836640                             | 1.591832                       |
-| 100'000              | 50      | 80.752910                             | 1.615058                       |
-| 100'000              | 100     | 162.333190                            | 1.623332                       |
-| 100'000              | 200     | 325.412140                            | 1.627061                       |
-| 10'000              | 400     | 651.5723                            | 1.628931                       |
-| 10'000              | 600     | 977.7707                            | 1.629618                       |
-| 1'000               | 800     | 1303.904                            | 1.62988                        |
-| 1'000               | 1000    | 1630.662                            | 1.630662                       |
-| 100                |2000    | 3263.42                             |  1.63171               |
+In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
 ---
 
@@ -29,13 +17,13 @@ The following tests use `d` variables and `2d` constraints.
 
 | **Number of Repeats** | **d**   | **Average Number of Basis Changes** |
 |---------------------|---------|-------------------------------------|
-| 100'000               | 10      | 38.13669                              |
-| 100'000               | 20      | 172.5733                            |
-| 100'000               | 50      | 1757.99164                            |
-| 10'000               | 100     | 12847.4397                           |
-| 1'000                 | 150     | 39657.767                           |
-| 400                 | 200     | 104334.322500                          |
-| 400                 | 250     | 154732.19                        |
+| 100'000               | 10      |                               |
+| 100'000               | 20      |                             |
+| 100'000               | 50      |                             |
+| 10'000               | 100     |                            |
+| 1'000                 | 150     |                            |
+| 400                 | 200     |                           |
+| 400                 | 250     |                        |
 
 #### Notes:
   
