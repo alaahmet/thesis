@@ -1,4 +1,4 @@
-Implementation of algorithms are taken from the paper **"Lower Bounds for a Subexponential Optimization Algorithm" by Matoušek**.  
+Algorithms are taken from the paper **"Lower Bounds for a Subexponential Optimization Algorithm" by Matoušek**.  
 Linear Programming Problem is from Section 4 of the paper.
 
 ---
