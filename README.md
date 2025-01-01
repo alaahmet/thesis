@@ -10,6 +10,15 @@ The following tests use `d` variables and `2d` constraints.
 
 ### Runs for **Sharir-Welzl Standard Algorithm**
 
+| **Number of Repeats** | **d** | **d*(d+3)/8** | **Average Number of Basis Changes** | **Standard Deviation** |
+|------------------------|-------|---------------|-------------------------------------|------------------------|
+| 1000 | 5 | 5.00 | 5.08 | 3.26 |
+| 1000 | 10 | 16.25 | 16.25 | 8.61 |
+| 1000 | 20 | 57.50 | 57.27 | 25.06 |
+| 1000 | 50 | 331.25 | 334.45 | 102.63 |
+| 1000 | 100 | 1287.50 | 1306.33 | 290.68 |
+| 1000 | 150 | 2868.75 | 2879.15 | 532.85 |
+
 - In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
 
