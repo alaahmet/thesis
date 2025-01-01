@@ -54,7 +54,7 @@ elif [ "$mode" -eq 1 ]; then
     echo "Running the program $runs times for each d equal to ${d_values[*]}."
     
     # Print table header
-    echo "| **Number of Repeats** | **d** | **d*(d+3)/8** | **Average Number of Basis Changes** | **Standard Deviation** |"
+    echo "| **Number of Repeats** | **d** | **d\*(d+3)/8** | **Average Number of Basis Changes** | **Standard Deviation** |"
     echo "|------------------------|-------|---------------|-------------------------------------|------------------------|"
     
     for d in "${d_values[@]}"; do
