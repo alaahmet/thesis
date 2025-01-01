@@ -9,25 +9,22 @@ I used Euler Cluster with 48 cores(maximum available number of cores without a s
 The following tests use `d` variables and `2d` constraints.  
 
 ### Runs for **Sharir-Welzl Standard Algorithm**
-In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
----
+- In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
+
 
 ### Runs for **Sharir-Welzl One Permutation Variant Algorithm**
 
-| **Number of Repeats** | **d**   | **Average Number of Basis Changes** |
-|---------------------|---------|-------------------------------------|
-| 100'000               | 10      |                               |
-| 100'000               | 20      |                             |
-| 100'000               | 50      |                             |
-| 10'000               | 100     |                            |
-| 1'000                 | 150     |                            |
-| 400                 | 200     |                           |
-| 400                 | 250     |                        |
+| **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **Standard Deviation** |
+|---------------------|---------|-------------------------------------| ---------------|
+| 1'000 | 5 | 4.939000 | 3.100789 | 
+| 1'000 | 10 | 16.818000 | 10.395428 |
+| 1'000 | 20 | 73.272000 | 51.090451 |
+| 1'000 | 50 | 1086.459000 | 1162.721033 | 
+| 1'000 | 100 | 15961.600000 | 18915.799967 |
+| 1'000 | 150 | 123510.937000 | 184339.910585 |
 
-#### Notes:
-  
-- There is a high variance in the One Permutation Variant.
+- There is a high variance going on.
 
 ---
 
