@@ -8,66 +8,56 @@ uniform_int_distribution<int> dist;
 int64_t basisChanges;
 
 // given a Basis B, return the optimal solution X to the constraints in B
-vector<int> basisToX(set<int> &B) {
+vector<int> basisToX(set<int> B) {
+    assert(B.size() == d);
     vector<int> X(d, 0);
-    for (auto a : B) {
-        assert(a >= 0 && a < 2 * d);
-        if (a == 0)
-            X[0] = 0;
-        else if (a == 1)
-            X[0] = 1;
-        else if (a % 2 == 0) {
-            int i = a / 2;
-            X[i] = 1 - X[i - 1];
-        } 
-        else if (a % 2 == 1) {
-            int i = a / 2;
-            X[i] = max(X[i - 1], X[i]); // apply max() in case both constraints for X_i are in the basis B
-        }
+    bool h1 = B.find(1) != B.end();
+    if(h1) X[0] = 1;
+    for(int i = 1; i < d; i++) {
+        bool h0 = B.find(2 * i) != B.end();
+        bool h1 = B.find(2 * i + 1) != B.end();
+        if(h0 && h1) X[i] = max(X[i - 1], 1 - X[i - 1]);
+        else if(h0) X[i] = 1 - X[i - 1];
+        else if(h1) X[i] = X[i - 1];
     }
     return X;
 }
 
-// Compute the new basis after adding an element
-set<int> findBasis(set<int> B) {
-    set <int> newBasis;
-    vector<int> x = basisToX(B);
-    for(auto h: B) {
-        int i = h / 2;
-        if(x[i] == 0) continue; // h is not needed in the basis, since x[h] >= 0 always holds
-        if(i == 0) {
-            assert(h == 1);
-            if(x[0] == 1) newBasis.insert(1);
-        }
-        else if(h % 2 == 0) {
-            if(x[i] == 1 - x[i - 1]) newBasis.insert(h);
-        }
-        else if(h % 2 == 1) {
-            if(x[i] == x[i - 1]) newBasis.insert(h);
-        }
-    }
-    return newBasis;
-}
 
-bool violates(int h, set<int> B) {
-    vector <int> X = basisToX(B);
+// Returns Basis(B \cup h)
+set <int> UpdateBasis(set <int> B, int h) {
+    assert(B.find(h) == B.end());
+    int cmpl;
+    if(h % 2 == 0) cmpl = h + 1;
+    if(h % 2 == 1) cmpl = h - 1;
+    B.erase(cmpl);
     B.insert(h);
-    vector <int> newX = basisToX(B);
-    if(X == newX) return false;
-    else return true;
+    assert(B.size() == d);
+    return B;
 }
 
+// Returns True if h violates constraints in B
+bool violates(int h, set<int> B) {
+    assert(B.find(h) == B.end());
+    int cmpl;
+    if(h == 1) return true;
+    else if(h == 0) return false;
+    vector <int> X = basisToX(B);
+    int idx = h / 2;
+    if((h % 2 == 0) ^ (X[idx - 1] == 1)) return true;
+    return false;
+}
 
 set<int> OnePermLp(vector<int> H, set<int> B) {
     shuffle(H.begin(), H.end(), mt);
     while(true) {
         int j = 0; // min j such that H_j which violates the constraints in B
-        while(j < H.size() && !violates(H[j], B)) {
+        while(j < H.size() && (B.find(H[j]) != B.end() || !violates(H[j], B))) {
+            // we increase j when either H[j] is in B OR H[j] doesn't violate B
             j++;
         }
         if(j == H.size()) break;
-        B.insert(H[j]);
-        B = findBasis(B);
+        B = UpdateBasis(B, H[j]);
         basisChanges++;
     }
     return B;
@@ -97,9 +87,18 @@ int main(int argc, char* argv[]) {
 
     basisChanges = 0;
 
-    set<int> emptyBase;
+    // random initial regular basis
+    set<int> T;
+    dist = uniform_int_distribution<int>(0, 1);    
+    for(int i = 0; i < d; i++) {
+        if(dist(mt) == 0) T.insert(2 * i);
+        else T.insert(2 * i + 1);
+    }
+    // random initial regular basis
 
-    set<int> B = OnePermLp(H, emptyBase);
+    assert(T.size() == d);
+
+    set<int> B = OnePermLp(H, T);
 
     vector<int> x = basisToX(B);
 
@@ -111,3 +110,6 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+
+
