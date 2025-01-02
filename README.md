@@ -10,8 +10,8 @@ The following tests use `d` variables and `2d` constraints.
 
 ### Runs for **Sharir-Welzl Standard Algorithm**
 
-| **Number of Repeats** | **d** | **d\*(d+3)/8** | **Average Number of Basis Changes** | **Stand>
-|------------------------|-------|---------------|-------------------------------------|-------->
+| **Number of Repeats** | **d** | **d\*(d+3)/8** | **Average Number of Basis Changes** | **Standard Deviation**|
+|------------------------|-------|---------------|-------------------------------------|--------|
 | 1000 | 5 | 5.00 | 5.00 | 3.14 |
 | 1000 | 10 | 16.25 | 16.49 | 8.65 |
 | 1000 | 20 | 57.50 | 57.84 | 24.50 |
