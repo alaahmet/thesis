@@ -5,6 +5,8 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
+![plot](https://github.com/user-attachments/assets/b6b3d1d6-aba9-41e9-894e-75686abfa144)
+
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
 The following tests use `d` variables and `2d` constraints.  
 
