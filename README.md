@@ -5,7 +5,7 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
-![plot](https://github.com/user-attachments/assets/b6b3d1d6-aba9-41e9-894e-75686abfa144)
+![01fc6410](https://github.com/user-attachments/assets/beb5866f-90a9-4cfe-ba81-6d117e1f91a9)
 
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
 The following tests use `d` variables and `2d` constraints.  
