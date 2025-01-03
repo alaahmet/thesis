@@ -64,24 +64,24 @@ The following tests use `d` variables and `2d` constraints.
      ```
 
 3. **`runlpsw.sh`**: A bash script for parallelizing the runs of `lpsw.cpp`. Uses all the cores available.
-   - Option 1:
+   - Option 0:
        - Takes 'r' (number of repeats) and 'd' (number of variables).
          ```bash
          ./runlpsw.sh <r> 0 <d>
          ```
-   - Option 2:
+   - Option 1:
        - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runlpsw.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
          ```bash
          ./runlpsw.sh <r> 1
          ```
       
 4. **`runlpswop.sh`**: A bash script for parallelizing the runs of `lpswop.cpp`. Uses all the cores available.
-   - Option 1:
+   - Option 0:
        - Takes 'r' (number of repeats) and 'd' (number of variables).
          ```bash
          ./runlpswop.sh <r> 0 <d>
          ```
-   - Option 2:
+   - Option 1:
        - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runlpswop.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
          ```bash
          ./runlpswop.sh <r> 1
