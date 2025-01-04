@@ -117,4 +117,4 @@ The following tests use `d` variables and `2d` constraints.
          ```bash
          ./runfastlpswop.sh <r> 1
          ```
-7. **`plot.py`**: It plots the average number of basis changes against the number of constraints (d) for both algorithms. The y-axis uses a logarithmic scale to handle the large range of values
+7. **`plot.py`**: It plots the average number of basis changes against the number of variables (d) for both algorithms. The y-axis uses a logarithmic scale to handle the large range of values
