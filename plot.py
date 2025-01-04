@@ -11,7 +11,7 @@ avg_basis_changes_standard = [d * (d + 3) / 8 for d in d_standard]
 plt.figure(figsize=(10, 6))
 plt.plot(d_standard, avg_basis_changes_standard, label='Sharir-Welzl', marker='o')
 plt.plot(d_one_perm, avg_basis_changes_one_perm, label='One Permutation Variant', marker='s')
-plt.xlabel('d (number of constraints)', fontsize=12)
+plt.xlabel('d (number of variables)', fontsize=12)
 plt.ylabel('Average Number of Basis Changes', fontsize=12)
 plt.title('Comparison of Basis Changes', fontsize=14)
 plt.legend()
