@@ -5,7 +5,7 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
-![plot](https://github.com/user-attachments/assets/01c2c962-f29d-421a-8916-764b03756b2c)
+![plot](https://github.com/user-attachments/assets/75791fc3-ee19-481d-bf32-55585429a808)
 
 
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
@@ -36,11 +36,11 @@ The following tests use `d` variables and `2d` constraints.
 | 100'000 | 10 | 17.13 | 10.98 |
 | 100'000 | 20 | 76.15 | 56.67 |
 | 100'000 | 50 | 1040.44 | 1088.33 |
-| 100'000 | 100 | 16517.69 | 24172.67 |
-| 100'000 | 150 | 129847.19 | 232435.68 |
-| 100'000 | 200 | 732461.11 | 1429494.87 |
-| 100'000 | 250 | 3363161.01 | 8576896.50 |
-| 100'000 | 300 | 12945857.26 | 37933793.16 |
+| 100'000 | 100 | 16'517 | 24'172 |
+| 100'000 | 150 | 129'847 | 232'435 |
+| 100'000 | 200 | 732'461 | 1'429'494 |
+| 100'000 | 250 | 3'363'161 | 8'576'896 |
+| 100'000 | 300 | 12'945'857 | 37'933'793 |
 - There is a high variance going on.
 
 ---
