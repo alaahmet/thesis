@@ -63,7 +63,7 @@ The following tests use `d` variables and `2d` constraints.
      ./lpswop <d>
      ```
 3. **`fastlpswop.cpp`**: Faster running version of `lpswop.cpp`.
-   - The dimension `d` is defined using a preprocesser macro `DVAL`, which defaults to 10 if not specified.
+   - The number of variables `d` is defined using a preprocesser macro `DVAL`, which defaults to 10 if not specified.
    - Compile and test using:
      ```bash
      g++ -o fastlpswop fastlpswop.cpp -std=c++17 -O3 -DDVAL=<d>
