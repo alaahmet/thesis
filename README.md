@@ -62,8 +62,19 @@ The following tests use `d` variables and `2d` constraints.
      g++ -o lpswop lpswop.cpp -std=c++17 -O3
      ./lpswop <d>
      ```
+3. **`fastlpswop.cpp`**: Faster running version of `lpswop.cpp`.
+   - The dimension `d` is defined using a preprocesser macro `DVAL`, which defaults to 10 if not specified.
+   - Compile and test using:
+     ```bash
+     g++ -o fastlpswop fastlpswop.cpp -std=c++17 -O3 -DDVAL=<d>
+     ./fastlpswop
+     ```
 
-3. **`runlpsw.sh`**: A bash script for parallelizing the runs of `lpsw.cpp`. Uses all the cores available.
+4. **`runlpsw.sh`**: A bash script for parallelizing the runs of `lpsw.cpp`. Uses all the cores available.
+   - Before running the script for the first time, make it executable:
+     ```bash
+     chmod +x runlpsw.sh
+     ```
    - Option 0:
        - Takes 'r' (number of repeats) and 'd' (number of variables).
          ```bash
@@ -75,7 +86,11 @@ The following tests use `d` variables and `2d` constraints.
          ./runlpsw.sh <r> 1
          ```
       
-4. **`runlpswop.sh`**: A bash script for parallelizing the runs of `lpswop.cpp`. Uses all the cores available.
+5. **`runlpswop.sh`**: A bash script for parallelizing the runs of `lpswop.cpp`. Uses all the cores available.
+   - Before running the script for the first time, make it executable:
+     ```bash
+     chmod +x runlpswop.sh
+     ```
    - Option 0:
        - Takes 'r' (number of repeats) and 'd' (number of variables).
          ```bash
@@ -87,4 +102,18 @@ The following tests use `d` variables and `2d` constraints.
          ./runlpswop.sh <r> 1
          ```
 
-
+6. **`runfastlpswop.sh`**: A bash script for parallelizing the runs of `fastlpswop.cpp`. Uses all the cores available.
+   - Before running the script for the first time, make it executable:
+     ```bash
+     chmod +x runfastlpswop.sh
+     ```
+   - Option 0:
+       - Takes 'r' (number of repeats) and 'd' (number of variables).
+         ```bash
+         ./runfastlpswop.sh <r> 0 <d>
+         ```
+   - Option 1:
+       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runfastlpswop.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
+         ```bash
+         ./runfastlpswop.sh <r> 1
+         ```
