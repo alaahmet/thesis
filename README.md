@@ -5,7 +5,7 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
-![plot](https://github.com/user-attachments/assets/75791fc3-ee19-481d-bf32-55585429a808)
+![plot](https://github.com/user-attachments/assets/596d308c-9a57-4b94-b377-705bd406bf88)
 
 
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
