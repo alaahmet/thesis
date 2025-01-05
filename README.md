@@ -12,7 +12,7 @@ Linear Programming Problem is from Section 4 of the paper.
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
 The following tests use `d` variables and `2d` constraints.  
 
-### Runs for **Sharir-Welzl Standard Algorithm**
+### Runs for **Sharir-Welzl**
 
 | **Number of Repeats** | **d** | **d\*(d+3)/8** | **Average Number of Basis Changes** | **Standard Deviation**|
 |------------------------|-------|---------------|-------------------------------------|--------|
@@ -30,7 +30,7 @@ The following tests use `d` variables and `2d` constraints.
 - In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
 
-### Runs for **Sharir-Welzl One Permutation Variant Algorithm**
+### Runs for **One Permutation Variant of Sharir-Welzl**
 
 | **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **Standard Deviation** | **$\mathbf{e^{\sqrt{d}}}$** |
 |-----------------------|---------|-------------------------------------|------------------------|---------------|
