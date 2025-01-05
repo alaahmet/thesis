@@ -5,7 +5,8 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
-![plot](https://github.com/user-attachments/assets/596d308c-9a57-4b94-b377-705bd406bf88)
+![plot](https://github.com/user-attachments/assets/bd4a3107-3f68-41bc-b302-80439871db06)
+
 
 
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
@@ -31,18 +32,18 @@ The following tests use `d` variables and `2d` constraints.
 
 ### Runs for **Sharir-Welzl One Permutation Variant Algorithm**
 
-| **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **Standard Deviation** |
-|---------------------|---------|-------------------------------------| ---------------|
-| 100'000 | 5 | 4.98 | 3.17 |
-| 100'000 | 10 | 17.13 | 10.98 |
-| 100'000 | 20 | 76.15 | 56.67 |
-| 100'000 | 50 | 1040.44 | 1088.33 |
-| 100'000 | 100 | 16'517 | 24'172 |
-| 100'000 | 150 | 129'847 | 232'435 |
-| 100'000 | 200 | 732'461 | 1'429'494 |
-| 100'000 | 250 | 3'363'161 | 8'576'896 |
-| 100'000 | 300 | 12'945'857 | 37'933'793 |
-| 100'000 | 400 | 142'997'652 | 411'153'281 |
+| **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **Standard Deviation** | **$e^{\sqrt{d}}$** |
+|-----------------------|---------|-------------------------------------|------------------------|-------------------|
+| 100'000               | 5       | 4.98                                | 3.17                   | 9                 |
+| 100'000               | 10      | 17.13                               | 10.98                  | 24                |
+| 100'000               | 20      | 76.15                               | 56.67                  | 88                |
+| 100'000               | 50      | 1040.44                             | 1088.33                | 1177              |
+| 100'000               | 100     | 16'517                              | 24'172                 | 22026             |
+| 100'000               | 150     | 129'847                             | 232'435                | 208'449            |
+| 100'000               | 200     | 732'461                             | 1'429'494              | 1'386'282           |
+| 100'000               | 250     | 3'363'161                           | 8'576'896              | 7'358'659           |
+| 100'000               | 300     | 12'945'857                          | 37'933'793             | 33'281'361          |
+| 100'000               | 400     | 142'997'652                         | 411'153'281            | 485'165'195         |
 
 - There is a high variance going on.
 
