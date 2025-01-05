@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 d_one_perm = [5, 10, 20, 50, 100, 150, 200, 250]
 avg_basis_changes_one_perm = [4.94, 16.82, 73.27, 1086.45, 15961, 123510, 727927, 3171021]
 
-# Data for Sharir-Welzl Standard Algorithm
+# Using the formula for standard Sharir-Welzl Algorithm.
 d_standard = d_one_perm
 avg_basis_changes_standard = [d * (d + 3) / 8 for d in d_standard]
 
