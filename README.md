@@ -25,6 +25,7 @@ The following tests use `d` variables and `2d` constraints.
 | 1000 | 250 | 7906.25 | 7866.99 | 1190.97 |
 | 1000 | 300 | 11362.50 | 11240.06 | 1489.59 |
 
+
 - In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
 
@@ -41,6 +42,8 @@ The following tests use `d` variables and `2d` constraints.
 | 100'000 | 200 | 732'461 | 1'429'494 |
 | 100'000 | 250 | 3'363'161 | 8'576'896 |
 | 100'000 | 300 | 12'945'857 | 37'933'793 |
+| 100'000 | 400 | 142'997'652 | 411'153'281 |
+
 - There is a high variance going on.
 
 ---
