@@ -27,7 +27,7 @@ The following tests use `d` variables and `2d` constraints.
 | 1000 | 300 | 11362.50 | 11240.06 | 1489.59 |
 
 
-- In average, we observe d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
+- We observe around d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
 
 ### Runs for **One Permutation Variant of Sharir-Welzl**
