@@ -5,7 +5,8 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
-![plot](https://github.com/user-attachments/assets/bd4a3107-3f68-41bc-b302-80439871db06)
+![plot](https://github.com/user-attachments/assets/4e770e6d-9ca9-4f91-89a9-ea1eab069ab0)
+
 
 
 
@@ -46,6 +47,9 @@ The following tests use `d` variables and `2d` constraints.
 | 100'000               | 250     | 3'363'161                           | 7'358'659              | 8'576'896                   |
 | 100'000               | 300     | 12'945'857                          | 33'281'361             | 37'933'793                  |
 | 100'000               | 400     | 142'997'652                         | 485'165'195            | 411'153'281                 |
+| 40 | 500 | 1'123'437'722 | 1'775'601'485 |
+| 40 | 600 | 7'004'421'118 | 16'745'889'716 |
+
 
 
 
