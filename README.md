@@ -53,19 +53,18 @@ The following tests use `d` variables and `2d` constraints.
 - There is a high variance going on.
 
 ---
-### Runs for **One Permutation Variant of Sharir-Welzl (Worst Initial Basis Chosen)**
+### Runs for **One Permutation Variant of Sharir-Welzl (Different Bases Selections)**
 
-| **Number of Repeats** | **d** |  **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}$** | **Standard Deviation** |
-|------------------------|-------|-------------------|------------------|------------------------|
-| 10'000 | 5 | 7.31 | 9.356459 | 2.43 |
-| 10'000 | 10 | 23.61 | 23.624327 | 10.49 |
-| 10'000 | 20 | 101.53 | 87.543428 | 60.60 |
-| 10'000 | 50 | 1369.25 | 1177.403653 | 1283.96 |
-| 10'000 | 100 | 21621.28 | 22026.465794 | 28084.03 |
-| 10'000 | 150 | 171'007 | 208'449 | 253'411 |
-| 10'000 | 200 | 962'074 | 1'386'281 | 2'089'302 |
-| 10'000 | 250 | 4'355'781 | 7'358'657 | 8'607'080 |
-| 10'000 | 300 | 17'241'407 | 33'281'359 | 38'647'749 |
+**Number of Repeats**| **d** | **All Initial Bases Randomized** | **Worst Initial Basis Chosen: (0,0,0,...)** | **Middle Ranked Basis Chosen(1,0,0,...)** | **$\mathbf{e^{\sqrt{d}}}$** |
+--|-------|----------------------------------|--------------------------------|--------------------------------|-----------------------------|
+10'000| 5     | 4.98                             | 7.31                           | 5.17                           | 9.36                       | 
+10'000| 10    | 17.13                            | 23.61                          | 19.58                          | 23.62                      | 
+10'000| 50    | 1040                          | 1369                        | 1281                        | 1177                    | 
+10'000| 100   | 16'517                           | 21'621                      | 20'872                      | 22'026                     | 
+10'000| 150   | 129'847                          | 171'007                        | 163'053                     | 208'449                    | 
+10'000| 200   | 732'461                          | 962'074                        | 933'594                     | 1'386'281                  | 
+10'000| 250   | 3'363'161                        | 4'355'781                      | 4'240'430                   | 7'358'657                  | 
+10'000| 300   | 12'945'857                       | 17'241'407                     | 16'634'965               | 33'281'361                 |
 
 
 
@@ -142,3 +141,84 @@ The following tests use `d` variables and `2d` constraints.
          ./runfastlpswop.sh <r> 1
          ```
 7. **`plot.py`**: It plots the average number of basis changes against the number of variables (d) for both algorithms. The y-axis uses a logarithmic scale to handle the large range of values
+
+
+
+
+
+
+
+
+
+Notes
+Memo elements in increasing order of value:
+d: 1, Bitmask: 1, Basis Changes: 0, Expected Value: 0
+d: 1, Bitmask: 0, Basis Changes: 2, Expected Value: 1
+|2|96|120|1.25
+Memo elements in increasing order of value:
+d: 2, Bitmask: 3, Basis Changes: 0, Expected Value: 0
+d: 2, Bitmask: 1, Basis Changes: 24, Expected Value: 1
+d: 2, Bitmask: 0, Basis Changes: 48, Expected Value: 2
+d: 2, Bitmask: 2, Basis Changes: 48, Expected Value: 2
+|3|5760|12912|2.24167
+Memo elements in increasing order of value:
+d: 3, Bitmask: 7, Basis Changes: 0, Expected Value: 0
+d: 3, Bitmask: 3, Basis Changes: 720, Expected Value: 1
+d: 3, Bitmask: 1, Basis Changes: 1440, Expected Value: 2
+d: 3, Bitmask: 5, Basis Changes: 1440, Expected Value: 2
+d: 3, Bitmask: 4, Basis Changes: 2160, Expected Value: 3
+d: 3, Bitmask: 6, Basis Changes: 2232, Expected Value: 3.1
+d: 3, Bitmask: 2, Basis Changes: 2400, Expected Value: 3.33333
+d: 3, Bitmask: 0, Basis Changes: 2520, Expected Value: 3.5
+|4|645120|2246784|3.48274
+Memo elements in increasing order of value:
+d: 4, Bitmask: 15, Basis Changes: 0, Expected Value: 0
+d: 4, Bitmask: 7, Basis Changes: 40320, Expected Value: 1
+d: 4, Bitmask: 3, Basis Changes: 80640, Expected Value: 2
+d: 4, Bitmask: 11, Basis Changes: 80640, Expected Value: 2
+d: 4, Bitmask: 9, Basis Changes: 120960, Expected Value: 3
+d: 4, Bitmask: 13, Basis Changes: 124992, Expected Value: 3.1
+d: 4, Bitmask: 5, Basis Changes: 134400, Expected Value: 3.33333
+d: 4, Bitmask: 1, Basis Changes: 141120, Expected Value: 3.5
+d: 4, Bitmask: 12, Basis Changes: 165312, Expected Value: 4.1
+d: 4, Bitmask: 14, Basis Changes: 174720, Expected Value: 4.33333
+d: 4, Bitmask: 6, Basis Changes: 187904, Expected Value: 4.66032
+d: 4, Bitmask: 4, Basis Changes: 189280, Expected Value: 4.69444
+d: 4, Bitmask: 10, Basis Changes: 189696, Expected Value: 4.70476
+d: 4, Bitmask: 2, Basis Changes: 203296, Expected Value: 5.04206
+d: 4, Bitmask: 8, Basis Changes: 204512, Expected Value: 5.07222
+d: 4, Bitmask: 0, Basis Changes: 208992, Expected Value: 5.18333
+|5|116121600|579098840|4.987
+Memo elements in increasing order of value:
+d: 5, Bitmask: 31, Basis Changes: 0, Expected Value: 0
+d: 5, Bitmask: 15, Basis Changes: 3628800, Expected Value: 1
+d: 5, Bitmask: 7, Basis Changes: 7257600, Expected Value: 2
+d: 5, Bitmask: 23, Basis Changes: 7257600, Expected Value: 2
+d: 5, Bitmask: 19, Basis Changes: 10886400, Expected Value: 3
+d: 5, Bitmask: 27, Basis Changes: 11249280, Expected Value: 3.1
+d: 5, Bitmask: 11, Basis Changes: 12096000, Expected Value: 3.33333
+d: 5, Bitmask: 3, Basis Changes: 12700800, Expected Value: 3.5
+d: 5, Bitmask: 25, Basis Changes: 14878080, Expected Value: 4.1
+d: 5, Bitmask: 29, Basis Changes: 15724800, Expected Value: 4.33333
+d: 5, Bitmask: 13, Basis Changes: 16911360, Expected Value: 4.66032
+d: 5, Bitmask: 9, Basis Changes: 17035200, Expected Value: 4.69444
+d: 5, Bitmask: 21, Basis Changes: 17072640, Expected Value: 4.70476
+d: 5, Bitmask: 5, Basis Changes: 18296640, Expected Value: 5.04206
+d: 5, Bitmask: 17, Basis Changes: 18406080, Expected Value: 5.07222
+d: 5, Bitmask: 1, Basis Changes: 18809280, Expected Value: 5.18333
+d: 5, Bitmask: 28, Basis Changes: 19353600, Expected Value: 5.33333
+d: 5, Bitmask: 30, Basis Changes: 20759220, Expected Value: 5.72068
+d: 5, Bitmask: 12, Basis Changes: 21634560, Expected Value: 5.9619
+d: 5, Bitmask: 14, Basis Changes: 22119780, Expected Value: 6.09562
+d: 5, Bitmask: 26, Basis Changes: 22538900, Expected Value: 6.21112
+d: 5, Bitmask: 22, Basis Changes: 22815460, Expected Value: 6.28733
+d: 5, Bitmask: 20, Basis Changes: 23493600, Expected Value: 6.47421
+d: 5, Bitmask: 6, Basis Changes: 23772300, Expected Value: 6.55101
+d: 5, Bitmask: 4, Basis Changes: 23774400, Expected Value: 6.55159
+d: 5, Bitmask: 10, Basis Changes: 24193660, Expected Value: 6.66712
+d: 5, Bitmask: 24, Basis Changes: 24687360, Expected Value: 6.80317
+d: 5, Bitmask: 18, Basis Changes: 24866060, Expected Value: 6.85242
+d: 5, Bitmask: 16, Basis Changes: 25237800, Expected Value: 6.95486
+d: 5, Bitmask: 2, Basis Changes: 25476500, Expected Value: 7.02064
+d: 5, Bitmask: 8, Basis Changes: 25636680, Expected Value: 7.06478
+d: 5, Bitmask: 0, Basis Changes: 26528400, Expected Value: 7.31052
