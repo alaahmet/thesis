@@ -150,7 +150,7 @@ The following tests use `d` variables and `2d` constraints.
 
 I brute-force all possible outcomes upto d=5 to find the exact expected value for the one-permutation variant.
 
-### $d=1$
+### d = 1
 
 $\mu=0.5$
 
@@ -159,7 +159,7 @@ Basis: | 1 | 0 |
 Expected Number of Basis Changes: | 0 | 1 |
 
 
-### $d=2$
+### d = 2
 
 $\mu=1.25$
 
@@ -170,7 +170,7 @@ Expected Number of Basis Changes: | 0 | 1 | 2 | 2 |
 
 
 
-### $d=3$
+### d = 3
 
 $\mu=2.24167$
 
@@ -178,7 +178,7 @@ Basis: | 1,1,1 | 1,1,0 | 1,0,0 | 1,0,1 | 0,0,1 | 0,1,1 | 0,1,0 | 0,0,0 |
 |--|--|--|--|--|--|--|--|--|
 Expected Number of Basis Changes: | 0 | 1 | 2 | 2 | 3 | 3.1 | 3.33333 | 3.5 |
 
-### $d=4$
+### d = 4
 
 $\mu=3.48274$
 
@@ -187,7 +187,7 @@ Basis: | 1,1,1,1 | 1,1,1,0 | 1,1,0,0 | 1,1,0,1 | 1,0,0,1 | 1,0,1,1 | 1,0,1,0 | 1
 |--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
 Expected Number of Basis Changes: | 0 | 1 | 2 | 2 | 3 | 3.1 | 3.33333 | 3.5 | 4.1 | 4.33333 | 4.66032 | 4.69444 | 4.70476 | 5.04206 | 5.07222 | 5.18333 |
 
-### $d=5$
+### d = 5
 
 $\mu=4.987$
 
