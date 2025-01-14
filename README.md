@@ -53,7 +53,7 @@ The following tests use `d` variables and `2d` constraints.
 - There is a high variance going on.
 
 ---
-### Runs for **One Permutation Variant of Sharir-Welzl (Worse Initial Basis Chosen)**
+### Runs for **One Permutation Variant of Sharir-Welzl (Worst Initial Basis Chosen)**
 
 | **Number of Repeats** | **d** |  **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}$** | **Standard Deviation** |
 |------------------------|-------|-------------------|------------------|------------------------|
