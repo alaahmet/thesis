@@ -57,7 +57,7 @@ The following tests use `d` variables and `2d` constraints.
 
 
 
-| **Number of Repeats** | **d** |  **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}1000 1* | **Standard Deviation** |
+| **Number of Repeats** | **d** |  **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}$** | **Standard Deviation** |
 |------------------------|-------|-------------------|------------------|------------------------|
 | 1000 | 5 | 8.16 | 9.356459 | 3.28 |
 | 1000 | 10 | 21.27 | 23.624327 | 11.72 |
