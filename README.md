@@ -55,7 +55,13 @@ The following tests use `d` variables and `2d` constraints.
 ---
 ### Runs for **One Permutation Variant of Sharir-Welzl (Different Bases Selections)**
 
-**Number of Repeats**| **d** | **All Initial Bases Randomized** | **Worst Initial Basis Chosen: (0,0,0,...)** | **Middle Ranked Basis Chosen(1,0,0,...)** | **%25-th Best Ranked Basis Chosen(1,1,0,...)** | **$\mathbf{e^{\sqrt{d}}}$** |
+| ||
+|--------|--------|
+| ![plot1](https://github.com/user-attachments/assets/55db7598-0490-4a27-a4f9-ad9f8fcca8c0) | ![plot2](https://github.com/user-attachments/assets/c9647251-f12e-4b98-89b8-9a9e4c41ab13)|
+
+
+
+**Number of Repeats**| **d** | **All Initial Bases Randomized** | **Worst Initial Basis Chosen: (0,0,0,...)** | **Median Best Basis Chosen(1,0,0,...)** | **Quartile Best Basis Chosen(1,1,0,...)** | **$\mathbf{e^{\sqrt{d}}}$** |
 --|-------|----------------------------------|--------------------------------|--------------------------------|----------------------------------|-----------------------------|
 10'000| 5     | 4.98                             | 7.31                           | 5.17                           | 3.49                             | 9.36                       |
 10'000| 10    | 17.13                            | 23.61                          | 19.58                          | 15.99                            | 23.62                      |
