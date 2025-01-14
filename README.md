@@ -67,85 +67,6 @@ The following tests use `d` variables and `2d` constraints.
 10'000| 300   | 12'945'857                       | 17'241'407                     | 16'634'965               | 33'281'361                 |
 
 
-
-## Files
-
-1. **`lpsw.cpp`**: Implements the Standard Sharir-Welzl Algorithm (Section 2 of the paper). Initial Start Basis is rerandomized in every run.
-   - Takes `d` (number of variables) as an argument.
-   - Compile and test using:
-     ```bash
-     g++ -o lpsw lpsw.cpp -std=c++17 -O3
-     ./lpsw <d>
-     ```
-
-2. **`lpswop.cpp`**: Implements the One Permutation Variant of the Sharir-Welzl Algorithm (Section 3 of the paper). Initial Start Basis is rerandomized in every run.
-   - Takes `d` (number of variables) as an argument.
-   - Compile and test using:
-     ```bash
-     g++ -o lpswop lpswop.cpp -std=c++17 -O3
-     ./lpswop <d>
-     ```
-3. **`fastlpswop.cpp`**: Faster running version of `lpswop.cpp`.
-   - The number of variables `d` is defined using a preprocesser macro `DVAL`, which defaults to 10 if not specified.
-   - Compile and test using:
-     ```bash
-     g++ -o fastlpswop fastlpswop.cpp -std=c++17 -O3 -DDVAL=<d>
-     ./fastlpswop
-     ```
-
-4. **`runlpsw.sh`**: A bash script for parallelizing the runs of `lpsw.cpp`. Uses all the cores available.
-   - Before running the script for the first time, make it executable:
-     ```bash
-     chmod +x runlpsw.sh
-     ```
-   - Option 0:
-       - Takes 'r' (number of repeats) and 'd' (number of variables).
-         ```bash
-         ./runlpsw.sh <r> 0 <d>
-         ```
-   - Option 1:
-       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runlpsw.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
-         ```bash
-         ./runlpsw.sh <r> 1
-         ```
-      
-5. **`runlpswop.sh`**: A bash script for parallelizing the runs of `lpswop.cpp`. Uses all the cores available.
-   - Before running the script for the first time, make it executable:
-     ```bash
-     chmod +x runlpswop.sh
-     ```
-   - Option 0:
-       - Takes 'r' (number of repeats) and 'd' (number of variables).
-         ```bash
-         ./runlpswop.sh <r> 0 <d>
-         ```
-   - Option 1:
-       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runlpswop.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
-         ```bash
-         ./runlpswop.sh <r> 1
-         ```
-
-6. **`runfastlpswop.sh`**: A bash script for parallelizing the runs of `fastlpswop.cpp`. Uses all the cores available.
-   - Before running the script for the first time, make it executable:
-     ```bash
-     chmod +x runfastlpswop.sh
-     ```
-   - Option 0:
-       - Takes 'r' (number of repeats) and 'd' (number of variables).
-         ```bash
-         ./runfastlpswop.sh <r> 0 <d>
-         ```
-   - Option 1:
-       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runfastlpswop.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
-         ```bash
-         ./runfastlpswop.sh <r> 1
-         ```
-7. **`plot.py`**: It plots the average number of basis changes against the number of variables (d) for both algorithms. The y-axis uses a logarithmic scale to handle the large range of values
-
-
-
-
-
 ## Brute-Forcing All Possible Outcomes
 
 I brute-force all possible outcomes upto d=5 to find the exact expected value for the one-permutation variant.
@@ -194,3 +115,89 @@ $\mu=4.987$
 Basis: | 1,1,1,1,1 | 1,1,1,1,0 | 1,1,1,0,0 | 1,1,1,0,1 | 1,1,0,0,1 | 1,1,0,1,1 | 1,1,0,1,0 | 1,1,0,0,0 | 1,0,0,1,1 | 1,0,1,1,1 | 1,0,1,1,0 | 1,0,0,1,0 | 1,0,1,0,1 | 1,0,1,0,0 | 1,0,0,0,1 | 1,0,0,0,0 | 0,0,1,1,1 | 0,1,1,1,1 | 0,0,1,1,0 | 0,1,1,1,0 | 0,1,0,1,1 | 0,1,1,0,1 | 0,0,1,0,1 | 0,1,1,0,0 | 0,0,1,0,0 | 0,1,0,1,0 | 0,0,0,1,1 | 0,1,0,0,1 | 0,0,0,0,1 | 0,1,0,0,0 | 0,0,0,1,0 | 0,0,0,0,0 |
 |--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
 Expected Number of Basis Changes: | 0 | 1 | 2 | 2 | 3 | 3.1 | 3.33333 | 3.5 | 4.1 | 4.33333 | 4.66032 | 4.69444 | 4.70476 | 5.04206 | 5.07222 | 5.18333 | 5.33333 | 5.72068 | 5.9619 | 6.09562 | 6.21112 | 6.28733 | 6.47421 | 6.55101 | 6.55159 | 6.66712 | 6.80317 | 6.85242 | 6.95486 | 7.02064 | 7.06478 | 7.31052 |
+
+
+## Files
+
+1. **`lpsw.cpp`**: Implements the Standard Sharir-Welzl Algorithm (Section 2 of the paper). Initial Start Basis is rerandomized in every run.
+   - Takes `d` (number of variables) as an argument.
+   - Compile and test using:
+     ```bash
+     g++ -o lpsw lpsw.cpp -std=c++17 -O3
+     ./lpsw <d>
+     ```
+
+2. **`lpswop.cpp`**: Implements the One Permutation Variant of the Sharir-Welzl Algorithm (Section 3 of the paper). Initial Start Basis is rerandomized in every run.
+   - Takes `d` (number of variables) as an argument.
+   - Compile and test using:
+     ```bash
+     g++ -o lpswop lpswop.cpp -std=c++17 -O3
+     ./lpswop <d>
+     ```
+3. **`fastlpswop.cpp`**: Faster running version of `lpswop.cpp`.
+   - The number of variables `d` is defined using a preprocesser macro `DVAL`, which defaults to 10 if not specified.
+   - Compile and test using:
+     ```bash
+     g++ -o fastlpswop fastlpswop.cpp -std=c++17 -O3 -DDVAL=<d>
+     ./fastlpswop
+     ```
+4. **`exact_expected_value_one_permutation_variant.cpp`**: Used for finding the exact expected value of one-permutation variant.
+   - For a given D, for every d in [1,...,D] prints the exact expected value and the expected value for every basis choice.
+   - Compile and test using:
+     ```bash
+     g++ -o exact_expected_value_one_permutation_variant exact_expected_value_one_permutation_variant.cpp -std=c++17 -O3
+     ./exact_expected_value_one_permutation_variant <D>
+     ```
+   - Runtime for D is $\Omega((2D)! \cdot 2^D)$, so only works up to D=5.
+
+
+
+5. **`runlpsw.sh`**: A bash script for parallelizing the runs of `lpsw.cpp`. Uses all the cores available.
+   - Before running the script for the first time, make it executable:
+     ```bash
+     chmod +x runlpsw.sh
+     ```
+   - Option 0:
+       - Takes 'r' (number of repeats) and 'd' (number of variables).
+         ```bash
+         ./runlpsw.sh <r> 0 <d>
+         ```
+   - Option 1:
+       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runlpsw.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
+         ```bash
+         ./runlpsw.sh <r> 1
+         ```
+      
+6. **`runlpswop.sh`**: A bash script for parallelizing the runs of `lpswop.cpp`. Uses all the cores available.
+   - Before running the script for the first time, make it executable:
+     ```bash
+     chmod +x runlpswop.sh
+     ```
+   - Option 0:
+       - Takes 'r' (number of repeats) and 'd' (number of variables).
+         ```bash
+         ./runlpswop.sh <r> 0 <d>
+         ```
+   - Option 1:
+       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runlpswop.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
+         ```bash
+         ./runlpswop.sh <r> 1
+         ```
+
+7. **`runfastlpswop.sh`**: A bash script for parallelizing the runs of `fastlpswop.cpp`. Uses all the cores available.
+   - Before running the script for the first time, make it executable:
+     ```bash
+     chmod +x runfastlpswop.sh
+     ```
+   - Option 0:
+       - Takes 'r' (number of repeats) and 'd' (number of variables).
+         ```bash
+         ./runfastlpswop.sh <r> 0 <d>
+         ```
+   - Option 1:
+       - Takes 'r' (number of repeats), while the list of variable values 'd' is hardcoded in `runfastlpswop.sh`. This option was primarily designed to genereate runtime table for multiple d values in a single run.
+         ```bash
+         ./runfastlpswop.sh <r> 1
+         ```
+8. **`plot.py`**: It plots the average number of basis changes against the number of variables (d) for both algorithms. The y-axis uses a logarithmic scale to handle the large range of values
+
