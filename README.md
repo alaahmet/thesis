@@ -29,7 +29,7 @@ The following tests use `d` variables and `2d` constraints.
 
 ### Runs for **One Permutation Variant of Sharir-Welzl (Initial Basis Randomized)**
 
-![plot](https://github.com/user-attachments/assets/9b74b69b-48ee-4845-9ee6-e50f5d78832a)
+![plot](https://github.com/user-attachments/assets/53827f19-54c3-4c46-a578-21db37d48fe9)
 
 
 | **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}$** | **Standard Deviation** |
