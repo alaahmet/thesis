@@ -5,10 +5,6 @@ Linear Programming Problem is from Section 4 of the paper.
 
 ## Run Results
 
-![plot](https://github.com/user-attachments/assets/14a1f7a5-9ea1-4a9b-8c3c-fc97160f612f)
-
-
-
 I used Euler Cluster with 48 cores(maximum available number of cores without a special request).
 The following tests use `d` variables and `2d` constraints.  
 
@@ -31,7 +27,9 @@ The following tests use `d` variables and `2d` constraints.
 - We observe around d(d+3)/8 basis changes, which aligns with the number of basis changes theoretically proven in the paper.
 
 
-### Runs for **One Permutation Variant of Sharir-Welzl**
+### Runs for **One Permutation Variant of Sharir-Welzl (Initial Basis Randomized)**
+
+![plot](https://github.com/user-attachments/assets/9b74b69b-48ee-4845-9ee6-e50f5d78832a)
 
 
 | **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}$** | **Standard Deviation** |
@@ -55,6 +53,19 @@ The following tests use `d` variables and `2d` constraints.
 - There is a high variance going on.
 
 ---
+### Runs for **One Permutation Variant of Sharir-Welzl (Worse Initial Basis Chosen)**
+
+
+
+| **Number of Repeats** | **d** |  **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}1000 1* | **Standard Deviation** |
+|------------------------|-------|-------------------|------------------|------------------------|
+| 1000 | 5 | 8.16 | 9.356459 | 3.28 |
+| 1000 | 10 | 21.27 | 23.624327 | 11.72 |
+| 1000 | 20 | 70.09 | 87.543428 | 62.36 |
+| 1000 | 50 | 753.12 | 1177.403653 | 1236.42 |
+| 1000 | 100 | 10643.34 | 22026.465794 | 20055.41 |
+| 1000 | 150 | 81441.20 | 208448.648558 | 170997.99 |
+| 1000 | 200 | 463468.95 | 1386280.750628 | 1049005.79 |
 
 
 ## Files
