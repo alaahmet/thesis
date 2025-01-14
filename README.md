@@ -146,79 +146,51 @@ The following tests use `d` variables and `2d` constraints.
 
 
 
+## Brute-Forcing All Possible Outcomes
+
+I brute-force all possible outcomes upto d=5 to find the exact expected value for the one-permutation variant.
+
+### $d=1$
+
+$\mu=0.5$
+
+Basis: | 1 | 0 |
+|--|--|--|
+Expected Number of Basis Changes: | 0 | 1 |
+
+
+### $d=2$
+
+$\mu=1.25$
+
+Basis: | 1,1 | 1,0 | 0,0 | 0,1 |
+|--|--|--|--|--|
+Expected Number of Basis Changes: | 0 | 1 | 2 | 2 |
 
 
 
 
-Notes
-Memo elements in increasing order of value:
-d: 1, Bitmask: 1, Basis Changes: 0, Expected Value: 0
-d: 1, Bitmask: 0, Basis Changes: 2, Expected Value: 1
-|2|96|120|1.25
-Memo elements in increasing order of value:
-d: 2, Bitmask: 3, Basis Changes: 0, Expected Value: 0
-d: 2, Bitmask: 1, Basis Changes: 24, Expected Value: 1
-d: 2, Bitmask: 0, Basis Changes: 48, Expected Value: 2
-d: 2, Bitmask: 2, Basis Changes: 48, Expected Value: 2
-|3|5760|12912|2.24167
-Memo elements in increasing order of value:
-d: 3, Bitmask: 7, Basis Changes: 0, Expected Value: 0
-d: 3, Bitmask: 3, Basis Changes: 720, Expected Value: 1
-d: 3, Bitmask: 1, Basis Changes: 1440, Expected Value: 2
-d: 3, Bitmask: 5, Basis Changes: 1440, Expected Value: 2
-d: 3, Bitmask: 4, Basis Changes: 2160, Expected Value: 3
-d: 3, Bitmask: 6, Basis Changes: 2232, Expected Value: 3.1
-d: 3, Bitmask: 2, Basis Changes: 2400, Expected Value: 3.33333
-d: 3, Bitmask: 0, Basis Changes: 2520, Expected Value: 3.5
-|4|645120|2246784|3.48274
-Memo elements in increasing order of value:
-d: 4, Bitmask: 15, Basis Changes: 0, Expected Value: 0
-d: 4, Bitmask: 7, Basis Changes: 40320, Expected Value: 1
-d: 4, Bitmask: 3, Basis Changes: 80640, Expected Value: 2
-d: 4, Bitmask: 11, Basis Changes: 80640, Expected Value: 2
-d: 4, Bitmask: 9, Basis Changes: 120960, Expected Value: 3
-d: 4, Bitmask: 13, Basis Changes: 124992, Expected Value: 3.1
-d: 4, Bitmask: 5, Basis Changes: 134400, Expected Value: 3.33333
-d: 4, Bitmask: 1, Basis Changes: 141120, Expected Value: 3.5
-d: 4, Bitmask: 12, Basis Changes: 165312, Expected Value: 4.1
-d: 4, Bitmask: 14, Basis Changes: 174720, Expected Value: 4.33333
-d: 4, Bitmask: 6, Basis Changes: 187904, Expected Value: 4.66032
-d: 4, Bitmask: 4, Basis Changes: 189280, Expected Value: 4.69444
-d: 4, Bitmask: 10, Basis Changes: 189696, Expected Value: 4.70476
-d: 4, Bitmask: 2, Basis Changes: 203296, Expected Value: 5.04206
-d: 4, Bitmask: 8, Basis Changes: 204512, Expected Value: 5.07222
-d: 4, Bitmask: 0, Basis Changes: 208992, Expected Value: 5.18333
-|5|116121600|579098840|4.987
-Memo elements in increasing order of value:
-d: 5, Bitmask: 31, Basis Changes: 0, Expected Value: 0
-d: 5, Bitmask: 15, Basis Changes: 3628800, Expected Value: 1
-d: 5, Bitmask: 7, Basis Changes: 7257600, Expected Value: 2
-d: 5, Bitmask: 23, Basis Changes: 7257600, Expected Value: 2
-d: 5, Bitmask: 19, Basis Changes: 10886400, Expected Value: 3
-d: 5, Bitmask: 27, Basis Changes: 11249280, Expected Value: 3.1
-d: 5, Bitmask: 11, Basis Changes: 12096000, Expected Value: 3.33333
-d: 5, Bitmask: 3, Basis Changes: 12700800, Expected Value: 3.5
-d: 5, Bitmask: 25, Basis Changes: 14878080, Expected Value: 4.1
-d: 5, Bitmask: 29, Basis Changes: 15724800, Expected Value: 4.33333
-d: 5, Bitmask: 13, Basis Changes: 16911360, Expected Value: 4.66032
-d: 5, Bitmask: 9, Basis Changes: 17035200, Expected Value: 4.69444
-d: 5, Bitmask: 21, Basis Changes: 17072640, Expected Value: 4.70476
-d: 5, Bitmask: 5, Basis Changes: 18296640, Expected Value: 5.04206
-d: 5, Bitmask: 17, Basis Changes: 18406080, Expected Value: 5.07222
-d: 5, Bitmask: 1, Basis Changes: 18809280, Expected Value: 5.18333
-d: 5, Bitmask: 28, Basis Changes: 19353600, Expected Value: 5.33333
-d: 5, Bitmask: 30, Basis Changes: 20759220, Expected Value: 5.72068
-d: 5, Bitmask: 12, Basis Changes: 21634560, Expected Value: 5.9619
-d: 5, Bitmask: 14, Basis Changes: 22119780, Expected Value: 6.09562
-d: 5, Bitmask: 26, Basis Changes: 22538900, Expected Value: 6.21112
-d: 5, Bitmask: 22, Basis Changes: 22815460, Expected Value: 6.28733
-d: 5, Bitmask: 20, Basis Changes: 23493600, Expected Value: 6.47421
-d: 5, Bitmask: 6, Basis Changes: 23772300, Expected Value: 6.55101
-d: 5, Bitmask: 4, Basis Changes: 23774400, Expected Value: 6.55159
-d: 5, Bitmask: 10, Basis Changes: 24193660, Expected Value: 6.66712
-d: 5, Bitmask: 24, Basis Changes: 24687360, Expected Value: 6.80317
-d: 5, Bitmask: 18, Basis Changes: 24866060, Expected Value: 6.85242
-d: 5, Bitmask: 16, Basis Changes: 25237800, Expected Value: 6.95486
-d: 5, Bitmask: 2, Basis Changes: 25476500, Expected Value: 7.02064
-d: 5, Bitmask: 8, Basis Changes: 25636680, Expected Value: 7.06478
-d: 5, Bitmask: 0, Basis Changes: 26528400, Expected Value: 7.31052
+### $d=3$
+
+$\mu=2.24167$
+
+Basis: | 1,1,1 | 1,1,0 | 1,0,0 | 1,0,1 | 0,0,1 | 0,1,1 | 0,1,0 | 0,0,0 |
+|--|--|--|--|--|--|--|--|--|
+Expected Number of Basis Changes: | 0 | 1 | 2 | 2 | 3 | 3.1 | 3.33333 | 
+
+### $d=4$
+
+$\mu=3.48274$
+
+
+Basis: | 1,1,1,1 | 1,1,1,0 | 1,1,0,0 | 1,1,0,1 | 1,0,0,1 | 1,0,1,1 | 1,0,1,0 | 1,0,0,0 | 0,0,1,1 | 0,1,1,1 | 0,1,1,0 | 0,0,1,0 | 0,1,0,1 | 0,1,0,0 | 0,0,0,1 | 0,0,0,0 |
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+Expected Number of Basis Changes: | 0 | 1 | 2 | 2 | 3 | 3.1 | 3.33333 | 3.5 | 4.1 | 4.33333 | 4.66032 | 4.69444 | 4.70476 | 5.04206 | 5.07222 | 5.18333 |
+
+### $d=5$
+
+$\mu=4.987$
+
+Basis: | 1,1,1,1,1 | 1,1,1,1,0 | 1,1,1,0,0 | 1,1,1,0,1 | 1,1,0,0,1 | 1,1,0,1,1 | 1,1,0,1,0 | 1,1,0,0,0 | 1,0,0,1,1 | 1,0,1,1,1 | 1,0,1,1,0 | 1,0,0,1,0 | 1,0,1,0,1 | 1,0,1,0,0 | 1,0,0,0,1 | 1,0,0,0,0 | 0,0,1,1,1 | 0,1,1,1,1 | 0,0,1,1,0 | 0,1,1,1,0 | 0,1,0,1,1 | 0,1,1,0,1 | 0,0,1,0,1 | 0,1,1,0,0 | 0,0,1,0,0 | 0,1,0,1,0 | 0,0,0,1,1 | 0,1,0,0,1 | 0,0,0,0,1 | 0,1,0,0,0 | 0,0,0,1,0 | 0,0,0,0,0 |
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+Expected Number of Basis Changes: | 0 | 1 | 2 | 2 | 3 | 3.1 | 3.33333 | 3.5 | 4.1 | 4.33333 | 4.66032 | 4.69444 | 4.70476 | 5.04206 | 5.07222 | 5.18333 | 5.33333 | 5.72068 | 5.9619 | 6.09562 | 6.21112 | 6.28733 | 6.47421 | 6.55101 | 6.55159 | 6.66712 | 6.80317 | 6.85242 | 6.95486 | 7.02064 | 7.06478 | 7.31052 |
