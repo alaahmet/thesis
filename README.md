@@ -77,7 +77,7 @@ The following tests use `d` variables and `2d` constraints.
 
 ## Brute-Forcing All Possible Outcomes
 
-I brute-force all possible outcomes upto d=5 to find the exact expected value for the one-permutation variant.
+I brute-force all possible outcomes upto `d=5` to find the exact expected value for the one-permutation variant. For a given ``d``, there are $(2d!) \cdot 2^d$ possibilities.
 
 ### d = 1
 
