@@ -155,12 +155,12 @@ $\text{Numerator}$ for the $\frac{\text{Numerator}}{ (2d)!}$: | 0 | 479001600 | 
      g++ -o fastlpswop fastlpswop.cpp -std=c++17 -O3 -DDVAL=<d>
      ./fastlpswop
      ```
-4. **`exact_expected_value_one_permutation_variant.cpp`**: Used for finding the exact expected value of one-permutation variant.
+4. **`bruteforce.cpp`**: Used for finding the exact expected value of one-permutation variant.
    - For a given D, for every d in [1,...,D] prints the exact expected value and the expected value for every basis choice.
    - Compile and test using:
      ```bash
-     g++ -o exact_expected_value_one_permutation_variant exact_expected_value_one_permutation_variant.cpp -std=c++17 -O3
-     ./exact_expected_value_one_permutation_variant <D>
+     g++ -o bruteforce bruteforce.cpp -std=c++17 -O3
+     ./bruteforce <D>
      ```
    - Runtime for D is $\Omega((2D)! \cdot 2^D)$, so only works up to D=5.
 
