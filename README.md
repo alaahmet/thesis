@@ -11,7 +11,7 @@ The following tests use `d` variables and `2d` constraints.
 ### Runs for **Sharir-Welzl**
 
 | **Number of Repeats** | **d** | **d\*(d+3)/8** | **Average Number of Basis Changes** | **Standard Deviation**|
-|------------------------|-------|---------------|-------------------------------------|--------|
+|------------------------|-------|-----------|---------------|--------|
 | 100'000 | 5 | 5.00 | 5.00 | 3.09 |
 | 100'000 | 10 | 16.25 | 16.26 | 8.54 |
 | 100'000 | 20 | 57.50 | 57.66 | 24.67 |
@@ -33,7 +33,7 @@ The following tests use `d` variables and `2d` constraints.
 
 
 | **Number of Repeats** | **d**   | **Average Number of Basis Changes** | **$\mathbf{e^{\sqrt{d}}}$** | **Standard Deviation** |
-|-----------------------|---------|-------------------------------------|------------------------|-----------------------------|
+|---------|---------|-------|-----------|-----------------|
 | 100'000               | 5       | 4.98                                | 9.36                   | 3.17                        |
 | 100'000               | 10      | 17.13                               | 23.62                  | 10.98                       |
 | 100'000               | 20      | 76.15                               | 87.54                  | 56.67                       |
@@ -56,13 +56,13 @@ The following tests use `d` variables and `2d` constraints.
 ### Runs for **One Permutation Variant of Sharir-Welzl (Different Bases Selections)**
 
 | ||
-|--------|--------|
+|--|----|
 | ![plot1](https://github.com/user-attachments/assets/55db7598-0490-4a27-a4f9-ad9f8fcca8c0) | ![plot2](https://github.com/user-attachments/assets/c9647251-f12e-4b98-89b8-9a9e4c41ab13)|
 
 
 
 **Number of Repeats**| **d** | **All Initial Bases Randomized** | **Worst Initial Basis Chosen: (0,0,0,...)** | **Median Best Basis Chosen(1,0,0,...)** | **Quartile Best Basis Chosen(1,1,0,...)** | **$\mathbf{e^{\sqrt{d}}}$** |
---|-------|----------------------------------|--------------------------------|--------------------------------|----------------------------------|-----------------------------|
+--|-------|-------------------|---------|------------|--------|----|
 10'000| 5     | 4.98                             | 7.31                           | 5.17                           | 3.49                             | 9.36                       |
 10'000| 10    | 17.13                            | 23.61                          | 19.58                          | 15.99                            | 23.62                      |
 10'000| 20    | 76.15                            | 101.53                          | 91.44                           | 79.89                            | 87.54                      |
