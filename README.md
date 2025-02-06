@@ -213,5 +213,3 @@ $\text{Numerator}$ for the $\frac{\text{Numerator}}{ (2d)!}$: | 0 | 479001600 | 
          ```bash
          ./runfastlpswop.sh <r> 1
          ```
-8. **`plot.py`**: It plots the average number of basis changes against the number of variables (d) for both algorithms. The y-axis uses a logarithmic scale to handle the large range of values
-
